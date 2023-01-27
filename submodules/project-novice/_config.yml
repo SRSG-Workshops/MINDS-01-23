@@ -78,6 +78,7 @@ cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 
 # order is critical
 setup_docs:
+  - github_and_ssh.md
   - project_setup.md
   - install_vscode.md
 

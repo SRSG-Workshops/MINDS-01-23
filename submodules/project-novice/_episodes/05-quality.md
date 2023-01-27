@@ -231,5 +231,3 @@ Not only does having well-structured docstrings (or their equivalents in another
 > ~~~
 > {: .language-python}
 {: .callout}
-
-{% include links.md %}

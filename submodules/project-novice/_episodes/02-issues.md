@@ -26,22 +26,21 @@ We'll run through an example of how to create and use them. As part of our setup
 {: .prereq}
 > ## Setup
 >
-> If you didn't make a copy of it earlier, [go to this link](https://github.com/Southampton-RSG-Training/project-novice-climate-analysis/generate) and create a new repository on your account called `climate-analysis`. If you've already got a `climate-analysis` repository from completing earlier training with us, then you can use that one!
+> If you didn't make a copy of it earlier, [go to this link](https://github.com/Southampton-RSG-Training/project-novice-template/generate) and create a new repository on your account called `climate-analysis`. If you've already got a `climate-analysis` repository from completing earlier training with us, then you can use that one!
 
 
 Go back to the home page for your `climate-analysis` repository, and click on the Issues tab. You should see a page listing the open issues on your repository, currently none.
 
 ![Issue screen](fig/02-issues/issues-none.png)
 
-If we look at the `rainfall_converison.py` file in our repository, we can see that it's got a couple of comments describing work that needs to be done (a.k.a. *"To Do notes"*):
+If we look at the `climate_analysis.py` file in our repository, we can see that it's got a comment describing work that needs to be done (a.k.a. a *"To Do note"*):
 
 ~~~
-# TODO: Add function inches_to_m
-# TODO: Add function inches_to_cm
+# TODO(smangham): Add call to process rainfall
 ~~~
 {: .python}
 
-This is an easy way to record information about your code, but it's not very accessible - if the code is in multiple files, you have to read all of them to know what the state of it is.  It's just not a very practical solution and makes it harder for new developers and users to understand your code. Instead, we're going to create a new issue, raising the problem that the functions to convert between inches and milimeters don't work in our code.
+This is an easy way to record information about your code, but it's not very accessible - if the code is in multiple files, you have to read all of them to know what the state of it is.  It's just not a very practical solution and makes it harder for new developers and users to understand your code. Instead, we're going to create a new issue, raising the problem that the rainfall processing functionality isn't yet working.
 
 ![Creating a new issue](fig/02-issues/issues-new.png)
 
@@ -63,10 +62,11 @@ The **Enhancement** label can be used to create issues that **request new featur
 
 The **Enhancement** label is a great way to communicate your future priorities to your collaborators, and also your future self - it's far too easy to leave a software project for a few months to write a paper, then come back and have forgotten the improvements you were going to make. If you have other users for your code, they can use the label to request new features, or changes to the way the code operates. It's generally worth paying attention to these suggestions, especially if you spend more time developing than running the code. It can be very easy to end up with quirky behaviour because of off-the-cuff choices during development. Extra pairs of eyes can point out ways the code can be made more accessible, and the easier a code is to use, then the more widely it will be adopted and the greater its impact will be.
 
+{: .callout}
 > ## Bug or Enhancement
 >
 > Is the issue we just added really a bug? In this case we could call it an **Enhancement** - it depends on whether we think this is missing functionality that *should* be there (a bug), or new functionality we want to add to an existing code. If it doesn't suit either, we could just leave it unlabelled - labels just exist to make things clearer, after all.
-{: .callout}
+
 
 Having open, publicly-visible lists of the the limitations and problems with your code is incredibly helpful. Even if some issues end up languishing unfixed for years, letting users know about them can save them a huge amount of work attempting to fix what turns out to be an unfixable problem from their end. It can also help you see at a glance what state your code is in, making it easier to prioritise future work!
 
@@ -92,7 +92,7 @@ It also helps give users more confidence that your code is actively used and dev
 
 ### Wontfix
 
-One interesting label is **Wontfix**, which indicates that an issue simply won't be worked on for whatever reason- maybe the bug it reports is outside of the use case of the software, or the feature it requests simply isn't a priority. 
+One interesting label is **Wontfix**, which indicates that an issue simply won't be worked on for whatever reason - maybe the bug it reports is outside of the use case of the software, or the feature it requests simply isn't a priority. 
 
 The **Lock issue** and **Pin issue** buttons allow you to block future comments on an issue, and pin it to the top of the issues page. This can make it clear you've thought about an issue and dismissed it!
 ![Lock & pin issue](fig/02-issues/issue-locked.png)
@@ -118,7 +118,12 @@ You can also use the mention system to link **GitHub accounts**. Instead of <kbd
 {: .challenge}
 > ## Linking Issues
 > 
-> Whilst we've documented that `inches_to_cm` is missing, `inches_to_m` is still missing too. Try to raise a new issue, labelled as a bug, that mentions your previous issue and links to your GitHub account to reference that you are going to be handling it as both are similar.
+> We've documented that we've not implemented any rainfall processing in `climate_analysis.py`,
+> but the rainfall code we'd want to use is completely undocumented. We need to fix that first!
+> 
+> Create a new issue, labelled **Documentation**, that mentions your previous issue and links
+> to your GitHub account to reference that you'll be fixing this issue as it's a pre-requisite
+> for the first one.
 >
 > Then, check out the first issue you raised and see if anything has happened.
 >
@@ -133,5 +138,3 @@ You can also use the mention system to link **GitHub accounts**. Instead of <kbd
 ### Commits
 
 Mentions also work in commit messages! If you reference issue numbers in your commits (e.g. `git commit -m "Fixes issue #65"`) then GitHub can **automatically close issues**, and will link the commit to the issue. This makes it easy for you to keep track of the changes to the code that were made in order to fix any given issue, should a similar bug crop up again in future.
-
-{% include links.md %}

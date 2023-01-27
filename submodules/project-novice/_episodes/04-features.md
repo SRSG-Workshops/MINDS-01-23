@@ -27,15 +27,18 @@ Fortunately, **git commits** provide you with a snapshot of the state of your so
 
 If we create a new release when we arrive on the final version of the code we're using in a paper, we can cite that specific version of the code - and anyone who wants to reproduce our work can easily get access to the version we used. We should make releases whenever we have a version of the code that's stable and reliable enough we would be happy to share it with others.
 
-Releases fit into the **feature-branch workflow** we discussed earlier. In this you have two key branches, **master** and **development**. You create branches off your development branch to work on new features, then when they're relatively stable, you merge them **back into the development branch**. Then, after you're happy the development branch is stable and reliable, you merge it **back to the master branch**. It's those commits to the master branch that can become your releases.
+Releases fit into the **feature-branch workflow** we discussed earlier. In this you have two key branches, **main** and **development**. You create branches off your development branch to work on new features, then when they're relatively stable, you merge them **back into the development branch**. Then, after you're happy the development branch is stable and reliable, you merge it **back to the main branch**. It's those commits to the master branch that can become your releases.
 
 ### To GitHub
 
-If you go back to your `climate-analysis` repository homepage, you can use the **Create a new release** link. We just need to give the release a name, description, and a **tag**.
+If you go back to your `climate-analysis` repository homepage, you can use the **Create a new release** link:
 
 ![Create a release](fig/04-features/releases-button.png)
+![Release details](fig/04-features/releases-details.png)
 
-Make sure you select to create a release on the **master branch**. You can do releases of your development branch for internal use, but you should always make sure your code is stable enough to go on your **master branch** before you cite it.
+ We just need to give the release a name, description, and a **tag**:
+
+![Release details](fig/04-features/releases-new.png)
 
 Whilst the name is often descriptive or a project-specific codename, the tag is usually a sequence of numbers. There are a range of strategies for tagging releases, but the most common is to tag a release in the format of **v1.0.0**. Then:
 
@@ -43,7 +46,9 @@ Whilst the name is often descriptive or a project-specific codename, the tag is 
 * If you add some new functionality **in a backwards-compatible way**, then **increment the second-to-last number** and reset the last number, e.g. `v1.0.1` to `v1.1.0`.
 * If you change your code so much it's **no longer backwards compatible** (for example, your input files require a new variable so it can no longer run older ones), then **increment the first number** and reset the others, e.g. `v1.1.0` to `v2.0.0`.
 
-This lets your collaborators know when they can safely update without breaking their ongoing work!
+This lets your collaborators know when they can safely update without breaking their ongoing work! Once we've decided on a tag, we can click **Publish release** and get a page with our description of our release, links to the git commit uses to generate it, and easy-to-download copies of the source code too:
+
+![Release details](fig/04-features/releases-made.png)
 
 {: .callout}
 > ## Limitations of releases
@@ -178,6 +183,3 @@ Within the open source licenses, there are two categories, **copyleft** and **pe
 The copyleft licences in the GPL still give a lot of freedom to the end users, but any code that they write based on GPLed code must also be licensed under the same license. This gives the developer assurance that anyone building on their code is also contributing back to the community. It’s actually a little more complicated than this, and the variants all have slightly different conditions and applicability, but this is the core of the license.
 
 Which of these types of license you prefer is up to you and those you develop code with. If you want more information, or help choosing a license, the [Choose An Open-Source License (linked here)](https://choosealicense.com) site can help. 
-
-
-{% include links.md %}

@@ -24,14 +24,14 @@ We'll use the tools we've introduced in this lesson so far. Forks don't have **I
 ![Selecting the settings tab](fig/06-project/project-settings-tab.png)
 ![Enabling issues](fig/06-project/project-settings-issues.png)
 
-Now we can start looking for problems with the project and recording them as issues. One immediate one is that there's no `develop`/`dev` branch - all the work has been done on the `master` branch:
+Now we can start looking for problems with the project and recording them as issues. One immediate one is that there's no `develop`/`dev` branch - all the work has been done on the `master`/`main` branch:
 
 ![No dev branch](fig/06-project/issue-dev.png)
 
 {: .challenge}
 > ## Identifying issues
-> We've found one problem, but there's *plenty* more here. Take a look at your fork of the `project-novice-demo` repository, identify two more things wrong with the code, and raise them as issues. Don't try to run the code - there's more than enough things wrong with it that you can spot just from a quick read-through.
-> Once you've got your issues, create a kanban board on the repo and place them on it.
+> We've found one problem, but there's *plenty* more here. Take a look at your fork of the `project-novice-demo` repository, identify two more things wrong with the code, and raise them, along with the lack of a `dev` branch, as issues. Don't try to run the code - there's more than enough things wrong with it that you can spot just from a quick read-through.
+> Once you've got your issues, create a new project board, link it to the repo, and place the issues on it.
 >
 >{: .solution}
 > > ## Solution
@@ -47,10 +47,14 @@ Now we can start looking for problems with the project and recording them as iss
 > > * Poorly-named variables (e.g. `df47`)
 > > * Poorly-documented functions *(e.g. `plot_bar_charts`)
 > > * Undocumented functions (e.g. `produce_count`)
+> >
+> > We'll go to the **Issues** tab of our `project-novice-demo`, repository,
+> > select **New Issue**, then create an issue. We can even link our issue directly to our project board from here:
+> > ![Creating and linking an issue](fig/06-project/miniproject-issue-link.png)
 
-Now we'll work on addressing the issues we've raised. If we want to use the feature-branch workflow, the lack of a `dev` branch is the first one we need to fix! So we'll address that first. We'll move the issue for this to the **In progress** column of our kanban board to let our collaboratorsk know we're fixing it:
+Now we'll work on addressing the issues we've raised. If we want to use the feature-branch workflow, the lack of a `dev` branch is the first one we need to fix! So we'll address that first. We go back to our project via the **Projects** tab, and move the issue to the **In progress** column of our kanban board to let our collaborators know we're fixing it:
 
-![Moving to in progress column](fig/06-project/project-move-progress.png)
+![Moving to in progress column](fig/06-project/miniproject-issue-board.png)
 
 Now we'll clone our repository to our machine:
 
@@ -74,7 +78,8 @@ Then create a new branch called `dev` and push it to our remote repository:
 
 {: .bash}
 ~~~ 
-git checkout -b dev
+git branch dev
+git switch dev
 ~~~
 
 {: .output}
@@ -101,7 +106,20 @@ branch 'dev' set up to track 'origin/dev'.
 
 With our work finished, we can close our issue and move it to the 'Done' column: 
 
-![Moving to done column](fig/06-project/project-move-done.png)
+![Moving to done column](fig/06-project/miniproject-issue-done.png)
+
+
+{: .callout}
+> ## GitHub Web Interface
+> We suggest fixing this issue by cloning the repository, to run through an example of linking up git and GitHub, but it can also be done via the web interface on GitHub.
+>
+> If you open the list of branches (where we saw there was no `dev` branch), we can click **View all branches**:
+> ![List of branches on GitHub](fig/06-project/issue-dev.png)
+> On this page, we can click **New branch** on the right side to create a new branch:
+> ![New branch on GitHub](fig/06-project/branch-dev-new.png)
+> Then in the pop-up we can name the branch `dev` and create it:
+> ![New branch details](fig/06-project/branch-dev-detail.png)
+
 
 {: .challenge}
 > ## Solving problems
@@ -114,7 +132,7 @@ With our work finished, we can close our issue and move it to the 'Done' column:
 >{: .solution}
 > > ## Solution
 > > We can address the broken links like this:
-> > * Move our issue from To Do to Work In Progress
+> > * Move our issue from **Todo** to **In Progress**
 > > * Go to our `README.md` file on GitHub, and switch to the `dev` branch version of it
 > >![Switch to the `dev` branch](fig/06-project/fix-dev.png)
 > > * Edit the file on GitHub to put in the correct URL (google it!)
@@ -129,4 +147,3 @@ With our work finished, we can close our issue and move it to the 'Done' column:
 
 Now you should have a good idea of the skills and techniques required to manage a project successfully!
 
-{% include links.md %}
