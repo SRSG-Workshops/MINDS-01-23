@@ -116,7 +116,7 @@ If you realise that several of your bugs have common roots, or that one Enhancem
 You can also use the mention system to link **GitHub accounts**. Instead of <kbd>#</kbd>, typing <kbd>@</kbd> will bring up a list of accounts linked to the repository. Users will receive notifications when somebody else references them- you can use this to notify people when you want to check a detail with them, or let them know something has been fixed (much easier than writing out all the same information again in an email!).
 
 {: .challenge}
-> ## Linking Issues
+> ## Exercise: Linking Issues
 > 
 > We've documented that we've not implemented any rainfall processing in `climate_analysis.py`,
 > but the rainfall code we'd want to use is completely undocumented. We need to fix that first!

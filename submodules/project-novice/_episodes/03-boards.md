@@ -131,7 +131,7 @@ Then you can pick **New label** on the right, and in the dialog give your new la
 
 
 {: .challenge}
-> ## Prioritisation
+> ## Exercise: Prioritisation
 > 
 > Currently, we don't really have enough cards to prioritise. Create a new card named **"High priority"**, and using one of the prioritisation schemes arrange your board so it's the most important.
 >

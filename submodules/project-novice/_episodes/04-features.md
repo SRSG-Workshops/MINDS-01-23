@@ -111,7 +111,7 @@ release paper.
 GitHub now also supports `CITATION.cff` files. A repo with one will have a button informing users of
 how to cite it, and providing a pre-made BibTex citation.
 
-> ## Adding a CITATION.cff
+> ## Exercise: Adding a CITATION.cff
 > Using the template from Zenodo, add a `CITATION.cff` file to your repository, then push it to GitHub.
 > > ## Solution
 > > **Contents of `CITATION.cff`:**

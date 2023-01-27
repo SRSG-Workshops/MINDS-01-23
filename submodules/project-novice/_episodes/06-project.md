@@ -29,7 +29,7 @@ Now we can start looking for problems with the project and recording them as iss
 ![No dev branch](fig/06-project/issue-dev.png)
 
 {: .challenge}
-> ## Identifying issues
+> ## Exercise: Identifying issues
 > We've found one problem, but there's *plenty* more here. Take a look at your fork of the `project-novice-demo` repository, identify two more things wrong with the code, and raise them, along with the lack of a `dev` branch, as issues. Don't try to run the code - there's more than enough things wrong with it that you can spot just from a quick read-through.
 > Once you've got your issues, create a new project board, link it to the repo, and place the issues on it.
 >
@@ -120,21 +120,23 @@ With our work finished, we can close our issue and move it to the 'Done' column:
 > Then in the pop-up we can name the branch `dev` and create it:
 > ![New branch details](fig/06-project/branch-dev-detail.png)
 
-
 {: .challenge}
-> ## Solving problems
-> Now we've got a `dev` branch and a project board with a To Do column with issues in, we can set about fixing one of them.
+> ## Exercise: Solving Problems
+> Now we've got a `dev` branch and a project board with a **Todo** column with issues in, we can set about fixing one of them.
 > 
 > We want to use the feature-branch workflow, so it would be easy to collaborate with other people. Pick one of your open issues, and fix it using the feature-branch workflow, then once it's done issue a release of your updated `master` branch!
 >
 > If you don't have any issues that can be fixed with the feature-branch workflow (e.g. *'Unclear commit messages'*) then add a new issue that the code has a broken link in the `README.md` file and work on fixing that. Small fixes can even be done directly on GitHub!
+>
+> **Note:** On GitHub, if you create a Pull Request on the **Pull Requests** tab of a fork, it goes back to the repository you forked *from* by default. Double-check when you're making a **Pull Request** that it's going to *your* fork repository, not `Southampton-RSG-Training`!
+> ![Pull request target](fig/06-project/miniproject-fork-pull.png)
 >
 >{: .solution}
 > > ## Solution
 > > We can address the broken links like this:
 > > * Move our issue from **Todo** to **In Progress**
 > > * Go to our `README.md` file on GitHub, and switch to the `dev` branch version of it
-> >![Switch to the `dev` branch](fig/06-project/fix-dev.png)
+> > ![Switch to the `dev` branch](fig/06-project/fix-dev.png)
 > > * Edit the file on GitHub to put in the correct URL (google it!)
 > > ![Edit directly on GitHub](fig/06-project/fix-edit.png)
 > > * Submit your changes as a new branch, and create a pull request
@@ -142,7 +144,8 @@ With our work finished, we can close our issue and move it to the 'Done' column:
 > > * Merge the pull request from our new branch to `dev`.
 > > * Close our issue on GitHub
 > > * Create a pull request from `dev` to `master`
-> > * When `master` is up to date, issue a release on GitHub
+> > * When `master` is up to date, issue a release on GitHub.
+> >
 > > Normally, we wouldn't just merge a branch into `dev` then `dev` straight into `master`- we'd merge several fixes or new features into `dev`, then merge to `master` and make a release. 
 
 Now you should have a good idea of the skills and techniques required to manage a project successfully!
