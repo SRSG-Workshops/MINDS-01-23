@@ -48,11 +48,11 @@ If it's not installed, you can install it by running `sudo apt-get install git` 
 your distribution.
 
 
-# Managing Academic Software Development
-
 ## GitHub ##
-Later on in the session, we'll be demonstrating how to share work with collaborators using [GitHub](https://github.com/). You'll need to [create an account there](https://github.com/signup). As your GitHub username will appear in the URLs of your projects there, it's best to use a short, clear version of your name if you can.
+We'll be using the website [GitHub](https://github.com/) to host, back up, and distribute our code. You'll need to [create an account there](https://github.com/signup). As your GitHub username will appear in the URLs of your projects there, it's best to use a short, clear version of your name if you can.
 
+
+# Managing Academic Software Development
 
 ## Project Demo Repository
 
