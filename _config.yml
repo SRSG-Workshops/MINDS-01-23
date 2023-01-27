@@ -19,8 +19,8 @@ logo_site: "https://rsgsoton.net"
 # For static delivery this section can all be ignored ==================================================================
 # Specify the location of the workshop
 venue: "Online & Highfield Campus"           # name of location use "online" if online
-address: "Teams & B100/70011 (8th)"         # address of location or url of platform
-platform-name: "Teams (31st)"   # name of online platform e.g. Teams, Zoom e.t.c
+address: "Teams (31st) & B100/70011 (8th)"         # address of location or url of platform
+platform-name: "Teams"   # name of online platform e.g. Teams, Zoom e.t.c
 country: "gb"         # e.g. gb
 language: "en"        # e.g. en
 latitude: "50.909698"    # latitude of location (Soton: 50.909698)
@@ -28,7 +28,7 @@ longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
 
 # Specify the start and end date of the workshop
 humandate: "31st January & 8th February 2023"      # e.g. "6th August"
-humantime: "9:00"      # e.g. "09:00-17:00"
+humantime: "9:00-12:00 (31st) & 10:30-15:00 (8th)"      # e.g. "09:00-17:00"
 startdate: "2023-01-31"        # e.g. YYYY-MM-DD # This is required for the surveys NOTE: 1990-1-1 will not work
 enddate: "2023-02-08"          # e.g. YYYY-MM-DD
 
