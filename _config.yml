@@ -4,7 +4,7 @@
 # What kind of thing is this ("workshop")? #Don't Change
 kind: "workshop"
 # Is this a permanent page 'static' or a taught workshop 'dated'
-delivery: "static"
+delivery: "dated"
 
 # Overall title for the Workshop.
 # This variable is used to (optionally) add a title in the "jumbotron"
