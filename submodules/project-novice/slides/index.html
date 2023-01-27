@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Southampton RSG">
+  <title>Software Carpentry</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Software Carpentry</h1>
+  <p class="author">Southampton RSG</p>
+</section>
+
+<section><section id="introduction" class="title-slide slide level2"><h2>0. Introduction</h2></section><section id="before-we-start" class="slide level3">
+<h3>Before We Start</h3>
+<ul>
+<li>Make sure you have an account at <a href="https://www.github.com">github.com</a></li>
+<li>Go to, or make, a <code>climate-analysis</code> repo</li>
+<li>Open VS Code or a text editor</li>
+<li>e.g. Atom, Sublime Text, Notepad++, BBEdit</li>
+</ul>
+</section></section>
+<section><section id="what-is-academic-software" class="title-slide slide level2"><h2>1. What Is Academic Software?</h2></section><section id="the-large" class="slide level3">
+<h3>The Large</h3>
+<ul>
+<li>Database creation &amp; management</li>
+<li>HPC simulation codes</li>
+<li>Machine learning pipelines</li>
+<li>OSes &amp; drivers</li>
+</ul>
+</section><section id="the-small" class="slide level3">
+<h3>The Small</h3>
+<ul>
+<li>Collections of scripts</li>
+<li>Cleaning data</li>
+<li>Plotting figures</li>
+<li>Toy models</li>
+</ul>
+</section><section id="the-commonalities" class="slide level3">
+<h3>The Commonalities</h3>
+<ul>
+<li>May not be true for Engineering/CompSci!</li>
+<li><em>Instrumental</em>- not a goal in itself</li>
+<li><em>Experimental</em>- may not have a clear spec</li>
+<li>Small teams</li>
+</ul>
+</section><section id="the-issues" class="slide level3">
+<h3>The Issues</h3>
+<ul>
+<li><strong>Paperware</strong></li>
+<li>Unplanned</li>
+<li>Undocumented</li>
+<li>Unmaintainable</li>
+<li>Can’t onboard people</li>
+<li>Disposable</li>
+</ul>
+</section><section id="serious-problems" class="slide level3">
+<h3>Serious Problems</h3>
+<ul>
+<li>Software Is Science</li>
+<li>Reproducibility</li>
+<li>Wasted effort</li>
+<li>Harms collaboration</li>
+</ul>
+</section></section>
+<section><section id="how-do-we-avoid-this" class="title-slide slide level2"><h2>2. How Do We Avoid This</h2></section><section id="forward-thinking" class="slide level3">
+<h3>Forward-thinking</h3>
+<ul>
+<li>Assume people will try to understand</li>
+<li>Assume people will try to reproduce</li>
+<li>Make it as easy as possible</li>
+</ul>
+</section><section id="understanding" class="slide level3">
+<h3>Understanding</h3>
+<ul>
+<li>Write clear code</li>
+<li>Document your code</li>
+<li>Document your <em>development process</em></li>
+<li>Document your code’s limitations</li>
+</ul>
+</section><section id="reproducibility" class="slide level3">
+<h3>Reproducibility</h3>
+<ul>
+<li>Track versions of your code</li>
+<li>Specify versions used in your papers</li>
+<li>Cite your code</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

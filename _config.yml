@@ -1,0 +1,211 @@
+#------------------------------------------------------------
+# Values for this workshop.
+#------------------------------------------------------------
+# What kind of thing is this ("workshop")? #Don't Change
+kind: "workshop"
+# Is this a permanent page 'static' or a taught workshop 'dated'
+delivery: "static"
+
+# Overall title for the Workshop.
+# This variable is used to (optionally) add a title in the "jumbotron"
+# (the grey box at the top of the page), and to the extra pages.
+title: "TBC Workshop Title"
+form_title: "TBC+Workshop+Title" # This is required for the surveys
+
+# Email address, no mailto:
+email: "rsginfo@soton.ac.uk"
+logo_site: "https://rsgsoton.net"
+
+# For static delivery this section can all be ignored ==================================================================
+# Specify the location of the workshop
+venue: "TBC"           # name of location use "online" if online
+address: "TBC"         # address of location or url of platform
+platform-name: "TBC"   # name of online platform e.g. Teams, Zoom e.t.c
+country: "TBC"         # e.g. gb
+language: "TBC"        # e.g. en
+latitude: "50.909698"    # latitude of location (Soton: 50.909698)
+longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
+
+# Specify the start and end date of the workshop
+humandate: "TBC"      # e.g. "6th August"
+humantime: "TBC"      # e.g. "09:00-17:00"
+startdate: "1990-01-01"        # e.g. YYYY-MM-DD # This is required for the surveys NOTE: 1990-1-1 will not work
+enddate: "TBC"          # e.g. YYYY-MM-DD
+
+# Specify the details of the instructors and helpers
+# Can be list, or single string
+instructor:
+  - "Instructor 1"
+  - "Instructor 2"
+instructor-email:
+  - "instructor1@domain.com"
+  - "instructor2@domain.com"
+helper:
+  - "Helper 1"
+  - "Helper 2"
+# ======================================================================================================================
+
+# See https://github.com/Southampton-RSG-Training/setup-documents for setup instructions.
+setup_docs:
+  - remote_desktop.md
+
+# Details about the lessons
+lessons:
+  - title: Best Practices in Data Organisation Using Spreadsheets
+    gh-name: spreadsheets
+    type: episode
+    branch: main
+    date: 13 January 2022
+    start-time: 15:00
+    order: 1
+
+  - title: Data Cleaning with OpenRefine
+    gh-name: openrefine-data-cleaning
+    type: episode
+    branch: main
+    date: 14 January 2022
+    start-time: 15:00
+    order: 2
+
+  - title: Managing Academic Software Development
+    gh-name: project-novice
+    type: episode
+    branch: main
+    date: 10 January 2022
+    start-time: 9:30 am
+    order: 3
+
+  - title: Automating Tasks with the Unix Shell  # Lesson title
+    org-name: Southampton-RSG-Training           # Name of the GitHub organisation (or individual) the lesson is in defaults to Southampton-RSG-Training
+    gh-name: shell-novice                        # Name of the GitHub repository for the lesson at https://github:com/{org-name}:
+    type: episode                                # Currently only 'episode' is valid
+    branch: main                                 # Set the branch of the repository to use, useful for lesson customization
+    date: 8 January 2022                         # The date of the lesson                   # date and start-time are required for z
+    start-time: 10:30 am                         # The start time of the lesson             # 'kind: workshop'
+    order: 4                                     # The position of the lesson in the course # order is required for 'delivery: static'
+
+  - title: Version Control with git
+    gh-name: git-novice
+    type: episode
+    branch: main
+    date: 9 January 2022
+    start-time: 8:30 am
+    order: 5
+
+  - title: Building Programs with Python
+    gh-name: python-novice
+    type: episode
+    branch: main
+    date:
+      - 11 January 2022
+      - 12 January 2022
+    start-time:
+      - 10:00 am
+      - 10:00 am
+    order: 6
+
+#  - title: Data Analysis and Visualization in R
+#    gh-name: r-novice
+#    type: episode
+#    branch: main
+#    date:
+#      - 15 January 2022
+#      - 16 January 2022
+#      - 17 January 2022
+#    start-time:
+#      - 15:00
+#      - 15:00
+#      - 15:00
+#    order: 7
+
+###
+# It is unlikely you need to modify the values below this line
+###
+
+# Specify that things in the episodes collection should be output.
+collections:
+  episodes:
+    output: true
+    permalink: /:slug
+
+include:
+  - _includes/rsg/
+
+# If there is both an R and python official version of a curriculum
+# (as listed on https://software-carpentry.org/lessons/ and
+# https://datacarpentry.org/lessons/), change the
+# value of the variable below ("flavor") to get the schedule and installation
+# instructions updated accordingly (valid values are 'r' or 'python').
+# Note: this is only for Data Carpentry and SWC at this time.
+flavor: "python"
+
+# If the workshop will be a lesson pilot (for a new official lesson or
+# a lesson in The Carpentries Incubator), set pilot to "true".
+pilot: false
+
+# rsg: Custom Lessons from the Southampton-RSG-Training git-org
+carpentry: "rsg"
+
+# Sites.
+amy_site: "https://amy.carpentries.org/"
+carpentries_github: "https://github.com/carpentries"
+carpentries_pages: "https://carpentries.github.io"
+carpentries_site: "https://carpentries.org/"
+dc_site: "https://datacarpentry.org"
+example_repo: "https://github.com/carpentries/lesson-example"
+example_site: "https://carpentries.github.io/lesson-example"
+incubator: "https://github.com/carpentries-incubator/"
+lc_site: "https://librarycarpentry.org/"
+swc_github: "https://github.com/swcarpentry"
+swc_pages: "https://swcarpentry.github.io"
+swc_site: "https://software-carpentry.org"
+template_repo: "https://github.com/carpentries/styles"
+training_site: "https://carpentries.github.io/instructor-training"
+workshop_repo: "https://github.com/carpentries/workshop-template"
+workshop_site: "https://carpentries.github.io/workshop-template"
+cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
+
+# Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am).
+start_time: 0
+
+# Set the default layout for things in the episodes collection.
+defaults:
+  - values:
+      root: .
+      layout: page
+  - scope:
+      path: ""
+      type: episodes
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: extras
+    values:
+      root: ..
+      layout: page
+
+
+# Files and directories that are not to be copied.
+exclude:
+  - Makefile
+  - bin/
+  - .Rproj.user/
+  - .vendor/
+  - vendor/
+  - .docker-vendor/
+  - submodules/
+
+# Turn on built-in syntax highlighting.
+highlighter: rouge
+
+# Using the new jekyll remote themes
+remote_theme: Southampton-RSG-Training/rsg-theme
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-target-blank
+  - jekyll-github-metadata
